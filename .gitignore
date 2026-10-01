@@ -19,3 +19,7 @@ coverage.xml
 
 # VS Code
 .vscode/
+
+cosmic-ray-*.sqlite
+cosmic-ray-*.txt
+cosmic-ray-*.html

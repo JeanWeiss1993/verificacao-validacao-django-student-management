@@ -811,3 +811,11 @@ def test_CT_EST_04_erro_consulta_attendance_report(contexto):
                 contexto["url"],
                 data=dados,
             )
+
+# ---------------------------------------------------------
+# CT_MUT_01_metodo_PUT_deve_ser_rejeitado
+# ---------------------------------------------------------
+def test_CT_MUT_01_metodo_PUT_deve_ser_rejeitado(contexto):
+    response = contexto["client"].put(contexto["url"])
+
+    assert response.status_code in [301, 302]

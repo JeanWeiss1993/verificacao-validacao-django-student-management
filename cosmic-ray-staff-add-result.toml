@@ -1,0 +1,8 @@
+[cosmic-ray]
+module-path = "student_management_app/StaffViews.py"
+timeout = 60.0
+excluded-modules = []
+test-command = 'cmd /c C:/cr/run_staff_add_result.cmd'
+
+[cosmic-ray.distributor]
+name = "local"

@@ -659,3 +659,13 @@ def test_CT_EST_03_erro_ao_buscar_resultado_existente(contexto):
         subject_assignment_marks=50,
         subject_exam_marks=60,
     ).exists()
+
+# ---------------------------------------------------------
+# CT_MUT_01_metodo_PUT_deve_ser_rejeitado
+# ---------------------------------------------------------
+
+def test_CT_MUT_01_metodo_PUT_deve_ser_rejeitado(contexto):
+    response = contexto["client"].put("/staff_add_result_save/")
+
+    assert response.status_code in [301, 302]
+    assert StudentResult.objects.count() == 0
